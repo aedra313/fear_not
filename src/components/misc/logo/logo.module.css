@@ -1,0 +1,88 @@
+.logo {
+    width: 69px;
+    height: 54px;
+}
+
+.img {
+    display: block;
+    width: 35px;
+    height: 32px;
+    margin: 0 auto;
+}
+
+.logo1line {
+    font-family: 'Hitch Hike', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.logo2line {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6px;
+    line-height: 7px;
+
+    color: #FFFFFF;
+
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 744px) {
+
+    .logo {
+        width: 165px;
+        height: 117px;
+        justify-content: center;
+    }
+
+    .img {
+        width: 63px;
+        height: 58px;
+    }
+
+    .logo1line {
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .logo2line {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+    .logo {
+        width: 177px;
+        height: 137px;
+
+    }
+
+    .img {
+        width: 75px;
+        height: 68px;
+    }
+
+    .logo1line {
+        font-size: 50px;
+        line-height: 69px;
+    }
+
+    .logo2line {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+}
