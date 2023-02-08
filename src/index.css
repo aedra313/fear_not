@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: Hitch Hike; /* Имя шрифта */
+  src: url(./fonts/Hitch-hike.otf); /* Путь к файлу со шрифтом */
+}
