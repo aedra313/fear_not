@@ -1,0 +1,114 @@
+.wrap {
+    display: flex;
+    align-items: center;
+
+    width: 216px;
+    height: 94px;
+
+    margin: 34px auto 24px;
+}
+
+
+.btn {
+    display: block;
+    text-decoration: none;
+}
+    .btn div {
+        width: 116px;
+        height: 38px;
+
+        display: table;
+        overflow: hidden;
+
+        background: #C8C807;
+        border-radius: 30px;
+    }
+
+    .btn div:hover {
+        background: #FFFF00;
+    }
+
+    .btn div p {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        color: #071422;
+    }
+
+.arrow {
+    width: 48px;
+    height: 48px;
+
+    align-self: flex-end;
+}
+
+.sticker {
+    width: 70px;
+    height: 70px;
+}
+
+@media (min-width: 744px) {
+    .wrap {
+        width: 514px;
+        height: 133px;
+
+        margin: 162px auto 66px;
+    }
+
+    .btn div {
+        width: 320px;
+        height: 80px;
+    }
+
+    .btn div p {
+        font-size: 27px;
+        line-height: 33px;
+    }
+
+    .arrow {
+        width: 55px;
+        height: 55px;
+    }
+
+    .sticker {
+        width: 128px;
+        height: 128px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrap {
+        width: 730px;
+        height: 234px;
+
+        margin: 91px auto 43px;
+
+    }
+
+    .btn div {
+        width: 404px;
+        height: 100px;
+    }
+
+    .btn div p {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .arrow {
+        width: 135px;
+        height: 135px;
+    }
+
+    .sticker {
+        width: 180px;
+        height: 180px;
+    }
+
+}
