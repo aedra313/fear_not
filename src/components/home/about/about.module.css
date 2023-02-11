@@ -1,0 +1,175 @@
+.aboutWrap {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutTitle {
+    font-family: 'Hitch Hike', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+
+    text-align: center;
+
+
+}
+
+.aboutContent {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+
+
+    text-align: justify;
+
+    min-width: 320px;
+    max-width: 604px;
+}
+
+.cardWrap {
+    margin-right: 0;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0 20px;
+    display: flex;
+}
+
+.card {
+    width: 325px;
+    height: 128px;
+    background: #071422;
+    border-radius: 30px;
+    margin: 20px;
+    margin-left: 10px;
+
+    display: flex
+
+}
+
+    .card img {
+        margin-left: -15px;
+    }
+
+    .card h3 {
+        font-family: 'Hitch Hike', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        margin: 12px 0 0 ;
+        text-align: center;
+    }
+
+    .card p {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+
+        width: 157px;
+        text-align: justify;
+    }
+
+.right {
+    justify-content: flex-end;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.reverse img {
+    margin-left: 20px;
+    margin-right: -10px;
+}
+
+@media (min-width: 744px) {
+
+    .aboutTitle {
+        font-size: 48px;
+        line-height: 66px;
+    }
+
+    .aboutContent {
+        font-size: 24px;
+        line-height: 40px;
+        min-width: 670px;
+        max-width: 1000px;
+
+    }
+
+    .card {
+        width: 670px;
+        height: 339px;
+    }
+
+    .card img {
+        margin-left: 0;
+
+        width: 309px;
+        height: 275px;
+
+        align-self: flex-end;
+    }
+
+    .card h3 {
+        font-size: 48px;
+        line-height: 66px;
+    }
+
+    .card p {
+        font-size: 20px;
+        line-height: 40px;
+
+        width: 350px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+    .aboutTitle {
+        font-size: 64px;
+        line-height: 88px;
+    }
+
+    .aboutContent {
+        font-size: 28px;
+        line-height: 40px;
+        min-width: 1160px;
+        max-width: 1500px;
+
+    }
+
+    .card {
+        width: 1204px;
+        height: 561px;
+    }
+
+    .card img {
+        margin-left: -15px;
+
+        width: 584px;
+        height: 520px;
+
+        align-self: flex-end;
+    }
+
+    .card h3 {
+        font-size: 96px;
+        line-height: 132px;
+    }
+
+    .card p {
+        font-size: 28px;
+        line-height: 40px;
+
+        width: 517px;
+    }
+
+}

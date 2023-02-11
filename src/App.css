@@ -1,9 +1,10 @@
 .app {
     background: black;
-    height:106vh;
+    height:100%;
     margin: 0;
     padding: 6px 19px 13px 15px;
     color: white;
+    overflow-x: hidden;
 
 }
 
