@@ -1,0 +1,126 @@
+.footer {
+    position: relative;
+    bottom: 0px;
+    left: -15px;
+    right: 0;
+
+    height: 110px;
+    overflow-x: hidden;
+    background: #071422;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer::after {
+    content: "";
+    background: url("./decor.svg");
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: -15px;
+    width: 100%;
+    height: 133px;
+    overflow-y: hidden;
+    z-index: 0;
+
+}
+
+.footerContent {
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    text-wrap: avoid;
+    margin: 10px 0 10px 25px;
+}
+
+.donat {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+
+        margin: 6px 0 6px 25px;
+}
+
+.social {
+    align-self: center;
+    margin-right: 20px;
+}
+
+.socialLink {
+    width: 20px;
+    height: 20px;
+    margin: 7px 0;
+}
+
+.donat span {
+    font-weight: 500;
+}
+
+
+@media (min-width: 744px) {
+    .footer {
+        bottom: 0px;
+        left: -37px;
+
+        height: 206px;
+    }
+
+    .title {
+        font-size: 20px;
+        line-height: 24px;
+        margin: 31px 0 14px 35px;
+    }
+
+    .donat {
+        font-size: 16px;
+        line-height: 19px;
+        margin: 10px 0 10px 35px;
+    }
+
+    .socialLink {
+        width: 30px;
+        height: 30px;
+        margin: 10px 0;
+    }
+}
+@media (min-width: 1440px) {
+    .footer {
+        bottom: 0px;
+        left: -96px;
+
+        height: 230px;
+    }
+
+    .title {
+        font-size: 20px;
+        line-height: 24px;
+        margin: 53px 0 21px 140px;
+    }
+
+    .donat {
+        font-size: 16px;
+        line-height: 19px;
+        margin: 10px 0 10px 140px;
+    }
+
+    .social {
+        display: flex;
+        margin-right: 140px;
+    }
+
+    .socialLink {
+        width: 35px;
+        height: 35px;
+        margin: 10px 15px;
+    }
+}
