@@ -2,7 +2,7 @@
     background: black;
     height:100%;
     margin: 0;
-    padding: 6px 19px 13px 15px;
+    padding: 6px 19px 0 15px;
     color: white;
     overflow-x: hidden;
 
@@ -10,12 +10,12 @@
 
 @media (min-width: 744px) {
     .app {
-        padding: 68px 34px 40px 37px;
+        padding: 68px 34px 0 37px;
     }
 }
 
 @media (min-width: 1440px) {
     .app {
-        padding: 72px 142px 54px 96px;
+        padding: 72px 142px 0 96px;
     }
 }
