@@ -1,0 +1,11 @@
+.container {
+    margin:10px 0;
+    overflow-x: scroll;
+    border: 1px solid crimson;
+}
+
+.wrap {
+    overflow-x: scroll;
+
+    margin: 0;
+}

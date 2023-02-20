@@ -3,8 +3,14 @@
     padding:0;
     display: block;
     position: relative;
-    left:-25px;
+    left:-6px;
     top: -65px;
     max-width: 90px;
     rotate: 270deg;
+}
+
+.label {
+    height: 80px;
+    width: 45px;
+    margin-left: 5px;
 }
