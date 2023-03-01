@@ -35,10 +35,11 @@ const Cardiogram = () => {
             <VictoryAxis crossAxis
               tickValues={TICK_VALUES}
               orientation="top"
+              offsetX={0}
 
               standalone={false} />
             <VictoryAxis dependentAxis
-              offsetX={50}
+              offsetX={0}
               gridComponent={<LineSegment x1='-25'/>}
               style={{
                 grid: {
