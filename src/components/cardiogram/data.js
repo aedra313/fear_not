@@ -1,8 +1,8 @@
 const DATA = {
-  total: 32,
+  total: 30,
   items: {
     0: {
-      day: 1.5,
+      day: 1,
       id: 4,
       military: undefined,
       civil: 'Адреналін',
@@ -10,7 +10,7 @@ const DATA = {
       rusIsolation: false,
     },
     1: {
-      day: 2.5,
+      day: 2,
       id: 3,
       military: 'Паніка',
       civil: undefined,
@@ -18,7 +18,7 @@ const DATA = {
       rusIsolation: false,
     },
     2: {
-      day: 3.5,
+      day: 3,
       id: 2,
       military: undefined,
       civil: 'Сумнів',
@@ -26,7 +26,7 @@ const DATA = {
       rusIsolation: false,
     },
     3: {
-      day: 4.5,
+      day: 4,
       id: 3,
       military: 'Самовпевненість',
       civil: undefined,
@@ -34,7 +34,7 @@ const DATA = {
       rusIsolation: false,
     },
     4: {
-      day: 5.5,
+      day: 5,
       id: 2,
       military: undefined,
       civil: 'Апатія',
@@ -42,7 +42,7 @@ const DATA = {
       rusIsolation: false,
     },
     5: {
-      day: 6.5,
+      day: 6,
       id: 5,
       military: ['легка ейфорія', 'жаль'],
       civil: 'Втома',
@@ -50,7 +50,7 @@ const DATA = {
       rusIsolation: false,
     },
     6: {
-      day: 7.5,
+      day: 7,
       id: 5,
       military: 'zero-point',
       civil: ['PLATO', 'Збудження'],
@@ -58,7 +58,7 @@ const DATA = {
       rusIsolation: false,
     },
     7: {
-      day: 8.5,
+      day: 8,
       id: 4,
       military: 'Стагнація',
       civil: 'Депресія',
@@ -66,7 +66,7 @@ const DATA = {
       rusIsolation: false,
     },
     8: {
-      day: 9.5,
+      day: 9,
       id: 4,
       military: undefined,
       civil: 'Розпач',
@@ -74,7 +74,7 @@ const DATA = {
       rusIsolation: false,
     },
     9: {
-      day: 10.5,
+      day: 10,
       id: 2,
       military: 'Відчай',
       civil: 'Рутина',
@@ -82,7 +82,7 @@ const DATA = {
       rusIsolation: false,
     },
     10: {
-      day: 11.5,
+      day: 11,
       id: 3,
       military: 'Тривога',
       civil: 'Втома',
@@ -90,7 +90,7 @@ const DATA = {
       rusIsolation: false,
     },
     11: {
-      day: 12.5,
+      day: 12,
       id: 4,
       military: undefined,
       civil: 'Атазагорафобiя',
@@ -98,7 +98,7 @@ const DATA = {
       rusIsolation: false,
     },
     12: {
-      day: 13.5,
+      day: 13,
       id: 5,
       military: 'Захват',
       civil: 'Втрата пильності',
@@ -106,7 +106,7 @@ const DATA = {
       rusIsolation: false,
     },
     13: {
-      day: 14.5,
+      day: 14,
       id: 5,
       military: 'Самотність',
       civil: 'Гнів',
@@ -114,7 +114,7 @@ const DATA = {
       rusIsolation: false,
     },
     14: {
-      day: 15.5,
+      day: 15,
       id: 6,
       military: 'Лють',
       civil: 'Байдужість',
@@ -122,7 +122,7 @@ const DATA = {
       rusIsolation: false,
     },
     15: {
-      day: 16.5,
+      day: 16,
       id: 4,
       military: 'Спокій',
       civil: 'Провина',
@@ -130,7 +130,7 @@ const DATA = {
       rusIsolation: false,
     },
     16: {
-      day: 17.5,
+      day: 17,
       id: 4,
       military: 'Деперсоналізація',
       civil: 'Синдром біженця',
@@ -138,7 +138,7 @@ const DATA = {
       rusIsolation: false,
     },
     17: {
-      day: 18.5,
+      day: 18,
       id: 4,
       military: undefined,
       civil: 'Прийняття',
@@ -146,7 +146,7 @@ const DATA = {
       rusIsolation: false,
     },
     18: {
-      day: 19.5,
+      day: 19,
       id: 4,
       military: 'Очікування',
       civil: 'Розчарування',
@@ -154,7 +154,7 @@ const DATA = {
       rusIsolation: false,
     },
     19: {
-      day: 20.5,
+      day: 20,
       id: 3,
       military: 'Спокій',
       civil: 'Провина вцілілого',
@@ -162,7 +162,7 @@ const DATA = {
       rusIsolation: false,
     },
     20: {
-      day: 21.5,
+      day: 21,
       id: 4,
       military: 'Піднесення',
       civil: 'Деентузіазм',
@@ -170,15 +170,15 @@ const DATA = {
       rusIsolation: false,
     },
     21: {
-      day: 22.5,
+      day: 22,
       id: 3,
       military: 'Злість',
-      civil: ['Персекуторна тривога', 'Відторгнення'],
+      civil: 'Відторгнення',
       faggot: 'Параноя',
       rusIsolation: false,
     },
     22: {
-      day: 23.5,
+      day: 23,
       id: 4,
       military: 'Фінішер',
       civil: 'Переклад провини',
@@ -186,7 +186,7 @@ const DATA = {
       rusIsolation: false,
     },
     23: {
-      day: 24.5,
+      day: 24,
       id: 5,
       military: 'Спостереження',
       civil: 'Пошук',
@@ -194,7 +194,7 @@ const DATA = {
       rusIsolation: false,
     },
     24: {
-      day: 25.5,
+      day: 25,
       id: 5,
       military: 'Самовпевненість',
       civil: 'Виснаження',
@@ -202,7 +202,7 @@ const DATA = {
       rusIsolation: false,
     },
     25: {
-      day: 26.5,
+      day: 26,
       id: 4,
       military: 'Сум',
       civil: 'Синдром Дженовезе',
@@ -210,7 +210,7 @@ const DATA = {
       rusIsolation: false,
     },
     26: {
-      day: 27.5,
+      day: 27,
       id: 2,
       military: 'Апатія',
       civil: 'Дифузія відповідальності',
@@ -218,7 +218,7 @@ const DATA = {
       rusIsolation: false,
     },
     27: {
-      day: 28.5,
+      day: 28,
       id: 4,
       military: 'Полювання',
       civil: 'Ізоляція',
@@ -226,7 +226,7 @@ const DATA = {
       rusIsolation: false,
     },
     28: {
-      day: 29.5,
+      day: 29,
       id: 4,
       military: 'Засідка',
       civil: 'Локальна напруга',
@@ -234,37 +234,14 @@ const DATA = {
       rusIsolation: false,
     },
     29: {
-      day: 30.5,
+      day: 30,
       id: 4,
       military: 'Овації',
       civil: 'Абаліенція',
       faggot: 'Прийняття',
       rusIsolation: false,
     },
-    30: {
-      day: 31.5,
-      id: 2,
-      military: 'Слава Україні',
-      civil: 'Героям Слава',
-      faggot: 'Путін хуйло',
-      rusIsolation: false,
-    },
-    31: {
-      day: 32.5,
-      id: 7,
-      military: 'ібуть мамок хароших русских',
-      civil: 'Васторг',
-      faggot: 'Ахуй',
-      rusIsolation: false,
-    },
-    32: {
-      day: 33.5,
-      id: 7,
-      military: 'ібуть мамок хароших русских',
-      civil: 'Васторг',
-      faggot: 'Ахуй',
-      rusIsolation: false,
-    },
+
   },
 };
 

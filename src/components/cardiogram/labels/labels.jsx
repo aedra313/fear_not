@@ -2,22 +2,28 @@ import React from 'react';
 import s from './labels.module.css';
 import DATA from './../data';
 import mixer from './mixer';
+import DayElement from '../dayElements/dayElement';
 
 const Labels = () => {
-  console.log(DATA.items);
   const days =[];
   let day =[];
-
   // eslint-disable-next-line guard-for-in
   for (const item in DATA.items) {
     days.push(<div>{day}</div>);
-    day = [];
+    console.log(day);
+
+
     mixer(day, item);
+    day = [];
   }
+
+
+  const dayButtons = days.map((day, index) => <DayElement key={`day ${day}`} labels={day} dayNumber={index+1} />);
+
 
   return (
     <div className={s.container}>
-      {days}
+      {dayButtons}
     </div>
   );
 };

@@ -1,0 +1,52 @@
+.wrap {
+    position: relative;
+    z-index: 1;
+margin-top: -250px;
+    margin-left: -1px;
+    margin-bottom: 20px;
+
+}
+.wrap:hover {
+    background: rgba(14, 40, 68, 0.5);
+    box-shadow: 1px 1px 25px rgba(255, 255, 0, 0.7);
+}
+
+.borders {
+    display: flex;
+    justify-content: space-between;
+    width: 51px;
+}
+
+.border {
+    width: 1px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.borderEdge {
+    height: 21px;
+    width:1px;
+    background: white;
+}
+
+.borderMain {
+    height: 42px;
+    width:1px;
+    background: white;
+}
+
+.labels div div {
+    margin: -15px auto 10px;
+}
+
+@media (min-width: 744px) {
+    .wrap {
+        margin-top: -250px;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        height: 100%;
+    }
+
+}

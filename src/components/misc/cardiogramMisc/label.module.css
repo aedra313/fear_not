@@ -7,10 +7,13 @@
     top: -65px;
     max-width: 90px;
     rotate: 270deg;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
 }
 
 .label {
     height: 80px;
     width: 45px;
-    margin-left: 5px;
+
 }

@@ -1,11 +1,27 @@
 .container {
     margin:10px 0;
     overflow-x: scroll;
-    border: 1px solid crimson;
+
 }
 
 .wrap {
     overflow-x: scroll;
 
-    margin: 0;
+    margin: 0 0 0 -50px;
+}
+
+@media (min-width: 744px) {
+    .container {
+        margin: 10px auto;
+        min-width: 700px;
+        max-width: 100%;
+
+        overflow-y: hidden;
+
+        height: 550px
+    }
+
+    .wrap {
+        overflow-y: hidden;
+    }
 }

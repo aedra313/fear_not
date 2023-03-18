@@ -19,14 +19,14 @@ const colors = [
 ];
 const blueGrey50 = '#ECEFF1';
 const blueGrey300 = '#90A4AE';
-const blueGrey700 = '#455A64';
+const white = '#fff';
 const grey900 = '#212121';
 // *
 // * Typography
 // *
 const sansSerif = '\'Hitch Hike\', \'Helvetica\', sans-serif';
 const letterSpacing = 'normal';
-const fontSize = 12;
+const fontSize = 14;
 // *
 // * Layout
 // *
@@ -35,6 +35,7 @@ const baseProps = {
   width: 350,
   height: 350,
   padding: 50,
+  paddingLeft: 0,
 };
 // *
 // * Labels
@@ -44,7 +45,7 @@ const baseLabelStyles = {
   fontSize,
   letterSpacing,
   padding,
-  fill: blueGrey700,
+  fill: white,
   stroke: 'transparent',
   strokeWidth: 0,
 };
@@ -53,7 +54,7 @@ const centeredLabelStyles = assign({textAnchor: 'middle'}, baseLabelStyles);
 // *
 // * Strokes
 // *
-const strokeDasharray = '15, 20';
+const strokeDasharray = '1, 34';
 const strokeLinecap = 'round';
 const strokeLinejoin = 'round';
 
@@ -93,14 +94,14 @@ export const Theme = {
           },
           ticks: {
             fill: 'transparent',
-            size: 5,
+            size: 0,
             stroke: blueGrey300,
             strokeWidth: 1,
             strokeLinecap,
             strokeLinejoin,
           },
           tickLabels: assign({}, baseLabelStyles, {
-            fill: blueGrey700,
+            fill: white,
           }),
         },
       },
@@ -132,7 +133,7 @@ export const Theme = {
           data: {
             fill: 'transparent',
             opacity: 1,
-            stroke: blueGrey700,
+            stroke: white,
             strokeWidth: 2,
           },
           labels: baseLabelStyles,
