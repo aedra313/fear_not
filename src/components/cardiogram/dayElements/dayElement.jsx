@@ -5,13 +5,18 @@ import useMobile from '../../../hooks/useMobile';
 import total from '../total';*/
 
 // eslint-disable-next-line react/prop-types
-const DayElement = ({labels /* dayNumber*/}) => {
+const DayElement = ({labels, setModalState, dayNumber}) => {
   // const width = {
   // width: 50 /* (totalWidth-100) / (total)*/,
   // };
   const isMobile = useMobile();
+
+  const modalOpener = () => {
+    setModalState(dayNumber);
+  };
+
   return (
-    <div className={s.wrap}>
+    <div className={s.wrap} onClick={modalOpener}>
       <div className={s.borders} >
         <div className={s.border} >
           <div className={s.borderEdge} />

@@ -9,7 +9,8 @@ import useWidth from '../../hooks/useWidth';
 import Labels from './labels/labels';
 import totalWidth from './TOTALWIDTH';
 // import DATA from './data';
-const Cardiogram = () => {
+// eslint-disable-next-line react/prop-types
+const Cardiogram = ({setModalState}) => {
   const WIDTH = useWidth();
   console.log(TICK_VALUES);
   console.log(COORDINATES);
@@ -61,7 +62,7 @@ const Cardiogram = () => {
             />
             <VictoryScatter size={4} data = {COORDINATES} style={{data: {fill: 'white'}}}/>
           </VictoryChart>
-          <Labels />
+          <Labels setModalState={setModalState} />
         </div>
       </div>
     </div>

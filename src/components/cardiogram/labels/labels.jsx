@@ -4,7 +4,8 @@ import DATA from './../data';
 import mixer from './mixer';
 import DayElement from '../dayElements/dayElement';
 
-const Labels = () => {
+// eslint-disable-next-line react/prop-types
+const Labels = ({setModalState}) => {
   const days =[];
   let day =[];
   // eslint-disable-next-line guard-for-in
@@ -18,7 +19,7 @@ const Labels = () => {
   }
 
 
-  const dayButtons = days.map((day, index) => <DayElement key={`day ${day}`} labels={day} dayNumber={index+1} />);
+  const dayButtons = days.map((day, index) => <DayElement setModalState={setModalState} key={`day ${day}`} labels={day} dayNumber={index+1} />);
 
 
   return (
