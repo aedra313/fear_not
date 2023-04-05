@@ -3,10 +3,11 @@ import Quiz from './quiz/quiz';
 import About from './about/about';
 import Cardiogram from '../cardiogram/cardiogram';
 
-const Home = () => {
+// eslint-disable-next-line react/prop-types
+const Home = ({setModalState}) => {
   return (
     <div>
-      <Cardiogram />
+      <Cardiogram setModalState={setModalState} />
       <Quiz />
       <About />
     </div>
