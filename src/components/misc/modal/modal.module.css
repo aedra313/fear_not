@@ -13,20 +13,26 @@
     background: rgba(0, 0, 0, 0.5);
 }
 .container {
+    display: flex;
+    flex-direction: column;
 
     width: 324px;
-    height: 500px;
+    min-height: 500px;
     background: #000000;
     border-radius: 30px;
     border: 1px solid red;
 
+    overflow-y: scroll;
+
     position: fixed;
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
+    top: 10%;
+    bottom: 10%;
     margin: auto;
+    padding: 0 21px 33px;
     z-index:2;
+
 }
 
 .close {
@@ -58,3 +64,47 @@
     transform: rotate(-45deg);
 }
 
+ .video {
+     margin-top: 40px;
+    display: flex;
+    width: 100%;
+     justify-content: space-around;
+     background-color: darkgray;
+}
+
+ .video iframe {
+     border-width: 1px;
+
+     border-color: red;
+ }
+
+ .condition {}
+
+ .conditionLabel {
+     font-family: 'Montserrat', sans-serif;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 15px;
+     line-height: 18px;
+
+     color: #FFFF00;
+     margin: 0;
+ }
+
+.conditionValue {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+    margin: 0;
+
+
+}
+
+.conditionValue span {
+    opacity: 0.3;
+}

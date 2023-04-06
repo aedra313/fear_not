@@ -7,6 +7,7 @@
 
 .wrap {
     overflow-x: scroll;
+    overflow-y: hidden;
 
     margin: 0 0 0 -50px;
 }

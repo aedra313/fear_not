@@ -12,9 +12,7 @@ import totalWidth from './TOTALWIDTH';
 // eslint-disable-next-line react/prop-types
 const Cardiogram = ({setModalState}) => {
   const WIDTH = useWidth();
-  console.log(TICK_VALUES);
-  console.log(COORDINATES);
-  console.log(TOTAL);
+
   // console.log(DATA.items.length());
   // console.log(DATA.items[2].day);
   const container = {
