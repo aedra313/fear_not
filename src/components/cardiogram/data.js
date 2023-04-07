@@ -1,7 +1,7 @@
 const DATA = {
   total: 30,
   items: {
-    0: {
+    1: {
       day: 1,
       id: 4,
       military: undefined,
@@ -9,7 +9,7 @@ const DATA = {
       faggot: undefined,
       rusIsolation: false,
     },
-    1: {
+    2: {
       day: 2,
       id: 3,
       military: 'Паніка',
@@ -17,7 +17,7 @@ const DATA = {
       faggot: undefined,
       rusIsolation: false,
     },
-    2: {
+    3: {
       day: 3,
       id: 2,
       military: undefined,
@@ -25,7 +25,7 @@ const DATA = {
       faggot: undefined,
       rusIsolation: false,
     },
-    3: {
+    4: {
       day: 4,
       id: 3,
       military: 'Самовпевненість',
@@ -33,7 +33,7 @@ const DATA = {
       faggot: 'Агонія',
       rusIsolation: false,
     },
-    4: {
+    5: {
       day: 5,
       id: 2,
       military: undefined,
@@ -41,7 +41,7 @@ const DATA = {
       faggot: 'Розгубленість',
       rusIsolation: false,
     },
-    5: {
+    6: {
       day: 6,
       id: 5,
       military: ['легка ейфорія', 'жаль'],
@@ -49,7 +49,7 @@ const DATA = {
       faggot: undefined,
       rusIsolation: false,
     },
-    6: {
+    7: {
       day: 7,
       id: 5,
       military: 'zero-point',
@@ -57,7 +57,7 @@ const DATA = {
       faggot: undefined,
       rusIsolation: false,
     },
-    7: {
+    8: {
       day: 8,
       id: 4,
       military: 'Стагнація',
@@ -65,7 +65,7 @@ const DATA = {
       faggot: 'Розгубленість ',
       rusIsolation: false,
     },
-    8: {
+    9: {
       day: 9,
       id: 4,
       military: undefined,
@@ -73,7 +73,7 @@ const DATA = {
       faggot: 'Пеніафобія',
       rusIsolation: false,
     },
-    9: {
+    10: {
       day: 10,
       id: 2,
       military: 'Відчай',
@@ -81,7 +81,7 @@ const DATA = {
       faggot: undefined,
       rusIsolation: false,
     },
-    10: {
+    11: {
       day: 11,
       id: 3,
       military: 'Тривога',
@@ -89,7 +89,7 @@ const DATA = {
       faggot: 'Повний терор',
       rusIsolation: false,
     },
-    11: {
+    12: {
       day: 12,
       id: 4,
       military: undefined,
@@ -97,7 +97,7 @@ const DATA = {
       faggot: 'Манія переслідування',
       rusIsolation: false,
     },
-    12: {
+    13: {
       day: 13,
       id: 5,
       military: 'Захват',
@@ -105,7 +105,7 @@ const DATA = {
       faggot: undefined,
       rusIsolation: false,
     },
-    13: {
+    14: {
       day: 14,
       id: 5,
       military: 'Самотність',
@@ -113,7 +113,7 @@ const DATA = {
       faggot: undefined,
       rusIsolation: false,
     },
-    14: {
+    15: {
       day: 15,
       id: 6,
       military: 'Лють',
@@ -121,7 +121,7 @@ const DATA = {
       faggot: 'Паніка',
       rusIsolation: false,
     },
-    15: {
+    16: {
       day: 16,
       id: 4,
       military: 'Спокій',
@@ -129,7 +129,7 @@ const DATA = {
       faggot: 'Безпорадність',
       rusIsolation: false,
     },
-    16: {
+    17: {
       day: 17,
       id: 4,
       military: 'Деперсоналізація',
@@ -137,7 +137,7 @@ const DATA = {
       faggot: 'Ефект Аша',
       rusIsolation: false,
     },
-    17: {
+    18: {
       day: 18,
       id: 4,
       military: undefined,
@@ -145,7 +145,7 @@ const DATA = {
       faggot: 'Синдром Зейгарнік',
       rusIsolation: false,
     },
-    18: {
+    19: {
       day: 19,
       id: 4,
       military: 'Очікування',
@@ -153,7 +153,7 @@ const DATA = {
       faggot: undefined,
       rusIsolation: false,
     },
-    19: {
+    20: {
       day: 20,
       id: 3,
       military: 'Спокій',
@@ -161,7 +161,7 @@ const DATA = {
       faggot: 'Ефект Мілгрема',
       rusIsolation: false,
     },
-    20: {
+    21: {
       day: 21,
       id: 4,
       military: 'Піднесення',
@@ -169,7 +169,7 @@ const DATA = {
       faggot: 'Сумнів',
       rusIsolation: false,
     },
-    21: {
+    22: {
       day: 22,
       id: 3,
       military: 'Злість',
@@ -177,7 +177,7 @@ const DATA = {
       faggot: 'Параноя',
       rusIsolation: false,
     },
-    22: {
+    23: {
       day: 23,
       id: 4,
       military: 'Фінішер',
@@ -185,7 +185,7 @@ const DATA = {
       faggot: 'Меншовартість',
       rusIsolation: false,
     },
-    23: {
+    24: {
       day: 24,
       id: 5,
       military: 'Спостереження',
@@ -193,7 +193,7 @@ const DATA = {
       faggot: 'Демонізація',
       rusIsolation: false,
     },
-    24: {
+    25: {
       day: 25,
       id: 5,
       military: 'Самовпевненість',
@@ -201,7 +201,7 @@ const DATA = {
       faggot: 'Героїзація ворога',
       rusIsolation: false,
     },
-    25: {
+    26: {
       day: 26,
       id: 4,
       military: 'Сум',
@@ -209,7 +209,7 @@ const DATA = {
       faggot: 'Пошук слабких',
       rusIsolation: false,
     },
-    26: {
+    27: {
       day: 27,
       id: 2,
       military: 'Апатія',
@@ -217,7 +217,7 @@ const DATA = {
       faggot: 'Робота зі слабкими',
       rusIsolation: false,
     },
-    27: {
+    28: {
       day: 28,
       id: 4,
       military: 'Полювання',
@@ -225,7 +225,7 @@ const DATA = {
       faggot: 'Страх',
       rusIsolation: false,
     },
-    28: {
+    29: {
       day: 29,
       id: 4,
       military: 'Засідка',
@@ -233,7 +233,7 @@ const DATA = {
       faggot: 'Виправдання',
       rusIsolation: false,
     },
-    29: {
+    30: {
       day: 30,
       id: 4,
       military: 'Овації',

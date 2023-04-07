@@ -1,20 +1,27 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
 import moment from 'moment';
 
 import s from './dateSwitcher.module.css';
+import {useSelector} from 'react-redux';
+import {decrementDay, incrementDay, selectDay} from './modalSlice';
 
 // eslint-disable-next-line react/prop-types
-const DateSwitcher = ({day, setDay}) => {
+const DateSwitcher = () => {
   moment.updateLocale('uk', {
     months: [
       'січня', 'лютого', 'березня', 'квітня', 'травня', 'червня', 'липня',
       'August', 'September', 'October', 'November', 'December',
     ],
   });
+  const dispatch = useDispatch();
+  const day = useSelector(selectDay);
+
+
   const date = moment('23-02-2022', 'DD-MM-YYYY').add(day, 'd').format('DD MMMM YYYY');
 
-  const handlePreviousDay = () => day>1 ? setDay(day-1) : false;
-  const handleNextDay = () => setDay(day+1);
+  const handlePreviousDay = () => day>1 ? dispatch(decrementDay()) : false;
+  const handleNextDay = () => dispatch(incrementDay());
 
   console.log(date);
   return (

@@ -1,18 +1,20 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 import Header from './components/header/header';
 import Home from './components/home/home';
 import Footer from './components/footer/footer';
-import Modal from './components/misc/modal/modal';
+import Modal from './components/cardiogram/modal/modal';
+import {useSelector} from 'react-redux';
+import {selectOpen} from './components/cardiogram/modal/modalSlice';
 
 function App() {
-  const [modal, setModal] = useState(true);
+  const opened = useSelector(selectOpen);
   return (
     <div className='app'>
       <Header />
-      <Home setModalState={setModal}/>
+      <Home />
       <Footer />
-      {modal !== false && <Modal modalState={modal} setModalState={setModal}/>}
+      {opened === true && <Modal />}
     </div>
   );
 }

@@ -1,20 +1,23 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
 import s from './dayElement.module.css';
 import useMobile from '../../../hooks/useMobile';
-/* import totalWidth from '../TOTALWIDTH';
-import total from '../total';*/
+import {manageDay, manageOpen} from '../modal/modalSlice';
+
 
 // eslint-disable-next-line react/prop-types
-const DayElement = ({labels, setModalState, dayNumber}) => {
+const DayElement = ({labels, dayNumber}) => {
   // const width = {
   // width: 50 /* (totalWidth-100) / (total)*/,
   // };
   const isMobile = useMobile();
+  const dispatch = useDispatch();
+
 
   const modalOpener = () => {
-    setModalState(dayNumber);
+    dispatch(manageOpen(true));
+    dispatch(manageDay(dayNumber));
   };
-
   return (
     <div className={s.wrap} onClick={modalOpener}>
       <div className={s.borders} >
