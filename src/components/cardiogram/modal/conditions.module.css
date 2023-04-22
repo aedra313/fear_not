@@ -1,0 +1,4 @@
+.container div {
+    transform: rotate(90deg);
+    color: black;
+}
