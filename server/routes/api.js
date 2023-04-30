@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Model1 = require('../models/model1');
 const Model2 = require('../models/model2');
-const DataModel = require('../models/DataModel');
+const CardiogramModel = require('../models/CardiogramModel');
 
 router.get('/model1', async (req, res) => {
   try {
@@ -13,6 +13,16 @@ router.get('/model1', async (req, res) => {
     res.status(500).json({error: 'Server Error'});
   }
 });
+router.get('/cardiogram', async (req, res) => {
+  try {
+    const data = await CardiogramModel.find();
+    res.json(data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server Error');
+  }
+});
+
 
 router.get('/model2', async (req, res) => {
   try {
@@ -24,11 +34,11 @@ router.get('/model2', async (req, res) => {
   }
 });
 
-router.post('/', async (req, res) => {
+router.post('/cardiogram', async (req, res) => {
   try {
     const {day, id, military, civil, russian, rusIsolation} = req.body;
 
-    const data = new DataModel({
+    const data = new CardiogramModel({
       day,
       id,
       military,
@@ -45,6 +55,5 @@ router.post('/', async (req, res) => {
     res.status(500).json({message: 'Server error'});
   }
 });
-
 
 module.exports = router;

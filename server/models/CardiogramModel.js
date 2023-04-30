@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const DataSchema = new mongoose.Schema({
+const CardiogramSchema = new mongoose.Schema({
   day: {
     type: Number,
     required: true,
@@ -24,6 +24,6 @@ const DataSchema = new mongoose.Schema({
   },
 });
 
-const DataModel = mongoose.model('Data', DataSchema);
+const CardiogramModel = mongoose.model('cardiogram', CardiogramSchema);
 
-module.exports = DataModel;
+module.exports = CardiogramModel;
