@@ -6,6 +6,7 @@ import Footer from './components/footer/footer';
 import Modal from './components/cardiogram/modal/modal';
 import {useSelector} from 'react-redux';
 import {selectOpen} from './components/cardiogram/modal/modalSlice';
+import AdminPage from './adminPage/adminPage';
 
 function App() {
   const opened = useSelector(selectOpen);
@@ -13,6 +14,9 @@ function App() {
     <div className='app'>
       <Header />
       <Home />
+      <div>
+        <AdminPage />
+      </div>
       <Footer />
       {opened === true && <Modal />}
     </div>

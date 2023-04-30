@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import s from './adminPage.module.css';
 
 const AdminPage = () => {
   const [day, setDay] = useState('');
   const [id, setId] = useState('');
-  const [militaryData, setMilitaryData] = useState(undefined);
+  const [militaryData, setMilitaryData] = useState('');
   const [militaryData2, setMilitaryData2] = useState('');
-  const [civilData, setCivilData] = useState(undefined);
+  const [civilData, setCivilData] = useState('');
   const [civilData2, setCivilData2] = useState('');
   const [russian, setRussian] = useState('');
   const [rusIsolation, setRusIsolation] = useState(false);
@@ -41,41 +42,44 @@ const AdminPage = () => {
     setCivilData2('');
     setRussian('');
     setRusIsolation(false);
+    alert('Дані збережено');
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={s.container} onSubmit={handleSubmit}>
       <label>
-                День:
-        <input type="number" value={day} onChange={(e) => setDay(e.target.value)} />
+        <span>День:</span>
+        <input required type="number" value={day} onChange={(e) => setDay(e.target.value)} />
       </label>
       <br />
       <label>
-                Id стану:
-        <input type="number" value={id} onChange={(e) => setId(e.target.value)} />
+        <span>Id стану:</span>
+        <input required type="number" value={id} onChange={(e) => setId(e.target.value)} />
       </label>
       <br />
       <label>
-                Військові:
-        <input type="text" value={militaryData} onChange={(e) => setMilitaryData(e.target.value)} />
-        <br />
-        <input disabled={!militaryData} type="text" value={militaryData2} onChange={(e) => setMilitaryData2(e.target.value)} />
+        <span>Військові:</span>
+        <div>
+          <input type="text" value={militaryData} onChange={(e) => setMilitaryData(e.target.value)} />
+          <input disabled={!militaryData} type="text" value={militaryData2} onChange={(e) => setMilitaryData2(e.target.value)} />
+        </div>
       </label>
       <br />
       <label>
-                Цивільні:
-        <input type="text" value={civilData} onChange={(e) => setCivilData(e.target.value)} />
-        <br />
-        <input disabled={!civilData} type="text" value={civilData2} onChange={(e) => setCivilData2(e.target.value)} />
+        <span>Цивільні:</span>
+        <div>
+          <input type="text" value={civilData} onChange={(e) => setCivilData(e.target.value)} />
+          <input disabled={!civilData} type="text" value={civilData2} onChange={(e) => setCivilData2(e.target.value)} />
+        </div>
       </label>
       <br />
       <label>
-                Вороги:
+        <span>Вороги:</span>
         <input type="text" value={russian} onChange={(e) => setRussian(e.target.value)} />
       </label>
       <br />
       <label>
-                Русоізоляція:
+        <span>Русоізоляція:</span>
         <input type="checkbox" checked={rusIsolation} onChange={(e) => setRusIsolation(e.target.checked)} />
       </label>
       <br />

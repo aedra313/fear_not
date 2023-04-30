@@ -8,20 +8,28 @@ import s from './cardiogram.module.css';
 import useWidth from '../../hooks/useWidth';
 import Labels from './labels/labels';
 import totalWidth from './TOTALWIDTH';
-// import DATA from './data';
+import axios from 'axios';
+
+
 // eslint-disable-next-line react/prop-types
 const Cardiogram = ({setModalState}) => {
   const WIDTH = useWidth();
 
-  // console.log(DATA.items.length());
-  // console.log(DATA.items[2].day);
   const container = {
     'width': WIDTH - 30 + 'px',
   };
   const wrap = {
     'width': totalWidth + 'px',
   };
-  // const strokeDasharray = '1, 48.3';
+
+  axios.get('http://localhost:3000/api/cardiogram')
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
   return (
     <div>
       <div className={s.container} style={container}>

@@ -4,7 +4,7 @@ import DateSwitcher from './dateSwitcher';
 import {useDispatch} from 'react-redux';
 import {manageOpen} from './modalSlice';
 import Conditions from './conditions';
-import VideoCard from "./videoCard";
+import VideoCard from './videoCard';
 
 // eslint-disable-next-line react/prop-types
 const Modal = () => {

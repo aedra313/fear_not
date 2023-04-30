@@ -1,0 +1,17 @@
+.container{
+    width:240px;
+    border: 1px solid red;
+    padding: 5px;
+}
+.container label {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+.container label span {
+    display: block;
+}
+
+.container label div {
+    width: 147px;
+}
