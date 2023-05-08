@@ -1,18 +1,13 @@
 const express = require('express');
+// eslint-disable-next-line new-cap
 const router = express.Router();
-const Model1 = require('../models/model1');
-const Model2 = require('../models/model2');
-const CardiogramModel = require('../models/CardiogramModel');
 
-router.get('/model1', async (req, res) => {
-  try {
-    const data = await Model1.find({});
-    res.status(200).json(data);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({error: 'Server Error'});
-  }
-});
+const CardiogramModel = require('../models/CardiogramModel');
+const ModalModel = require('../models/ModalModel');
+
+
+// cardiogram get post
+
 router.get('/cardiogram', async (req, res) => {
   try {
     const data = await CardiogramModel.find();
@@ -20,17 +15,6 @@ router.get('/cardiogram', async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');
-  }
-});
-
-
-router.get('/model2', async (req, res) => {
-  try {
-    const data = await Model2.find({});
-    res.status(200).json(data);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({error: 'Server Error'});
   }
 });
 
@@ -45,6 +29,39 @@ router.post('/cardiogram', async (req, res) => {
       civil,
       russian,
       rusIsolation,
+    });
+
+    await data.save();
+
+    res.status(201).json({message: 'Data saved successfully'});
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({message: 'Server error'});
+  }
+});
+
+// video data in modal window get post
+
+router.get('/modal', async (req, res) => {
+  try {
+    const data = await ModalModel.find();
+    res.json(data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server Error');
+  }
+});
+
+router.post('/modal', async (req, res) => {
+  try {
+    const {day, videoURL1, description1, videoURL2, description2} = req.body;
+
+    const data = new ModalModel({
+      day,
+      videoURL1,
+      description1,
+      videoURL2,
+      description2,
     });
 
     await data.save();

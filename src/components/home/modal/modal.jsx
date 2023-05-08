@@ -2,7 +2,7 @@ import React from 'react';
 import s from './modal.module.css';
 import DateSwitcher from './dateSwitcher';
 import {useDispatch} from 'react-redux';
-import {manageOpen} from './modalSlice';
+import {manageOpen} from '../../../reducers/modalSlice';
 import Conditions from './conditions';
 import VideoCard from './videoCard';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {selectDay} from './modalSlice';
+import {selectDay} from '../../../reducers/modalSlice';
 import mixer from '../labels/mixer';
 import s from './conditions.module.css';
 

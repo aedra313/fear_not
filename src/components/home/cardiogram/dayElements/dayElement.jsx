@@ -2,7 +2,7 @@ import React from 'react';
 import {useDispatch} from 'react-redux';
 import s from './dayElement.module.css';
 import useMobile from '../../../hooks/useMobile';
-import {manageDay, manageOpen} from '../modal/modalSlice';
+import {manageDay, manageOpen} from '../../../reducers/modalSlice';
 
 
 // eslint-disable-next-line react/prop-types

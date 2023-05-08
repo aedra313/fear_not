@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {selectDay} from './modalSlice';
+import {selectDay} from '../../../reducers/modalSlice';
 import s from './modal.module.css';
 import DATA from './../modalData';
 

@@ -4,7 +4,7 @@ import moment from 'moment';
 
 import s from './dateSwitcher.module.css';
 import {useSelector} from 'react-redux';
-import {decrementDay, incrementDay, selectDay} from './modalSlice';
+import {decrementDay, incrementDay, selectDay} from '../../../reducers/modalSlice';
 
 // eslint-disable-next-line react/prop-types
 const DateSwitcher = () => {
