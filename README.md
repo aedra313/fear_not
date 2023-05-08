@@ -3,6 +3,7 @@
 
 Technologies used:
 Backend: Node.js, MongoDB, Express.js
+
 Frontend: ReactJS, Redux, VictoryJS (used for creating the "Cardiogram" component)
 
 Project description:
