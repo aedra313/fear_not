@@ -1,14 +1,30 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {selectDay} from '../../../reducers/modalSlice';
-import mixer from '../labels/mixer';
 import s from './conditions.module.css';
+import {selectDataLabelsArray} from '../../../reducers/cardiogramDataSlice';
+
 
 const Conditions = () => {
-  const dayNumber = useSelector(selectDay);
-  const conditionLabels = [];
-  mixer(conditionLabels, dayNumber);
+  // eslint-disable-next-line new-cap
 
+
+  const dayNumber = useSelector(selectDay);
+
+  const dataArray = useSelector(selectDataLabelsArray);
+
+  console.log(dataArray);
+
+
+  const [conditionLabels, setConditionLabels] = useState([]);
+
+
+  useEffect(() => {
+    console.log(dataArray);
+    setConditionLabels([dataArray[dayNumber - 1]]);
+  }, [dataArray, dayNumber]);
+
+  console.log(conditionLabels);
   return (
     <div className={s.container}>
       {conditionLabels}

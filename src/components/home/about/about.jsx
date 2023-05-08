@@ -1,5 +1,5 @@
 import React from 'react';
-import taras from './taras.svg';
+import taras from './taras.png';
 
 import s from './about.module.css';
 

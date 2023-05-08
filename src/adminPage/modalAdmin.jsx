@@ -58,12 +58,12 @@ const ModalAdmin = () =>{
       <br />
       <label>
         <span>videoURL2:</span>
-        <input required type="text" value={videoURL2} onChange={(e) => setVideoURL2(e.target.value)} />
+        <input type="text" value={videoURL2} onChange={(e) => setVideoURL2(e.target.value)} />
       </label>
       <br />
       <label>
         <span>Description2:</span>
-        <input required type="text" value={description2} onChange={(e) => setDescription2(e.target.value)} />
+        <input type="text" value={description2} onChange={(e) => setDescription2(e.target.value)} />
       </label>
       <br />
       <button type="submit">Submit</button>

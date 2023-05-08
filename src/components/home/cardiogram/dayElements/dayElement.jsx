@@ -1,8 +1,9 @@
 import React from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import s from './dayElement.module.css';
-import useMobile from '../../../hooks/useMobile';
-import {manageDay, manageOpen} from '../../../reducers/modalSlice';
+import useMobile from '../../../../hooks/useMobile';
+import {manageDay, manageOpen} from '../../../../reducers/modalSlice';
+import {fetchModalData, selectModalData} from '../../../../reducers/ModalDataSlice';
 
 
 // eslint-disable-next-line react/prop-types
@@ -12,11 +13,15 @@ const DayElement = ({labels, dayNumber}) => {
   // };
   const isMobile = useMobile();
   const dispatch = useDispatch();
+  const modalData =useSelector(selectModalData);
 
 
   const modalOpener = () => {
     dispatch(manageOpen(true));
     dispatch(manageDay(dayNumber));
+    dispatch(fetchModalData());
+
+    console.log(modalData);
   };
   return (
     <div className={s.wrap} onClick={modalOpener}>

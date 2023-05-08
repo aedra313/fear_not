@@ -2,7 +2,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {selectDay} from '../../../reducers/modalSlice';
 import s from './modal.module.css';
-import DATA from './../modalData';
+import DATA from '../cardiogram/modalData';
 
 const VideoCard = () => {
   const dayNumber = useSelector(selectDay);
