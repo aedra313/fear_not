@@ -4,6 +4,7 @@ const router = express.Router();
 
 const CardiogramModel = require('../models/CardiogramModel');
 const ModalModel = require('../models/ModalModel');
+const QuizModel = require('../models/QuizModel');
 
 
 // cardiogram get post
@@ -62,6 +63,35 @@ router.post('/modal', async (req, res) => {
       description1,
       videoURL2,
       description2,
+    });
+
+    await data.save();
+
+    res.status(201).json({message: 'Data saved successfully'});
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({message: 'Server error'});
+  }
+});
+
+// Quiz URL
+
+router.get('/quiz', async (req, res) => {
+  try {
+    const data = await QuizModel.find();
+    res.json(data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server Error');
+  }
+});
+
+router.post('/quiz', async (req, res) => {
+  try {
+    const {quizURL} = req.body;
+
+    const data = new QuizModel({
+      quizURL,
     });
 
     await data.save();

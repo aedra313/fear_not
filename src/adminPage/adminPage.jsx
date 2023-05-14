@@ -1,6 +1,7 @@
 import React from 'react';
 import CardiogramAdmin from './cardiogramAdmin';
 import ModalAdmin from './modalAdmin';
+import QuizAdmin from './quizAdmin';
 
 
 const AdminPage = () => {
@@ -8,6 +9,7 @@ const AdminPage = () => {
     <>
       <CardiogramAdmin />
       <ModalAdmin />
+      <QuizAdmin />
     </>
   );
 };
