@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const ModalSchema = new mongoose.Schema({
   day: {
@@ -21,6 +21,6 @@ const ModalSchema = new mongoose.Schema({
   },
 });
 
-const ModalModel = mongoose.model('modal', ModalSchema);
+const ModalModel = mongoose.model("modal", ModalSchema);
 
 module.exports = ModalModel;

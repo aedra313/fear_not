@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const CardiogramSchema = new mongoose.Schema({
   day: {
@@ -24,6 +24,6 @@ const CardiogramSchema = new mongoose.Schema({
   },
 });
 
-const CardiogramModel = mongoose.model('cardiogram', CardiogramSchema);
+const CardiogramModel = mongoose.model("cardiogram", CardiogramSchema);
 
 module.exports = CardiogramModel;

@@ -64,19 +64,7 @@
     transform: rotate(-45deg);
 }
 
- .video {
-     margin-top: 40px;
-    display: flex;
-    width: 100%;
-     justify-content: space-around;
-     background-color: darkgray;
-}
 
- .video iframe {
-     border-width: 1px;
-
-     border-color: red;
- }
 
  .condition {}
 
