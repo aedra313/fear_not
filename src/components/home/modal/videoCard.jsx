@@ -21,45 +21,45 @@ const VideoCard = () => {
     fetchData();
   }, []);
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [videoToggle, setVideoToggle] = useState(false);
 
   if (isLoading) {
     return <div>Loading...</div>;
   }
-  const handlePrevClick = () => {
-    setActiveIndex((prevIndex) => (prevIndex === 0 ? 1 : 0));
+  const handleClick = () => {
+    setVideoToggle( !videoToggle);
   };
 
-  const handleNextClick = () => {
-    setActiveIndex((prevIndex) => (prevIndex === 1 ? 0 : 1));
-  };
-
-
-  /*  const dayData = DATA.items[dayNumber];
-  const video = dayData.videoURL;
-  const description = dayData.description;*/
   const dayData = data[dayNumber-1];
   console.log(dayData);
-  const video1 = dayData.videoURL1;
-  const video2 = dayData.videoURL2;
-  const description1 = dayData.description1;
-  const description2 = dayData.description2;
+  const frame1 ={
+    video: dayData.videoURL1,
+    description: dayData.description1,
+    cn: 'imgFrame ' + (videoToggle ? s.toggleOut : s.toggleIn),
+  };
+  const frame2 ={
+    video: dayData.videoURL2,
+    description: dayData.description2,
+    cn: 'imgFrame ' + (videoToggle ? s.toggleIn : s.toggleOut),
+  };
+
+
+  const frame =({video, description, cn}) =>{
+    return (
+      <div className={s.videoCard} >
+        <iframe className={cn} src={video} allow="autoplay"></iframe>
+        <p className={cn}>{description}</p>
+      </div>
+    );
+  };
 
   console.log(data);
   return (
     <div className={s.wrap}>
-      {video2 && <button className={s.backButton} onClick={handlePrevClick} />}
-      <div className={s.videoCard} style={{display: activeIndex === 0 ? 'block' : 'none'}}>
-
-        <iframe className={activeIndex === 0 ? `${s.show}` : ''} style={{opacity: activeIndex === 0 ? '1' : '0'}} src={video1} allow="autoplay"></iframe>
-
-        <p className={activeIndex === 0 ? `${s.show}` : ''}>{description1}</p>
-      </div>
-      {video2 && <div className={s.videoCard} style={{display: activeIndex === 1 ? 'block' : 'none'}}>
-        <iframe className={activeIndex === 1 ? `${s.show}` : ''} style={{opacity: activeIndex === 0 ? '1' : '0'}} src={video2} width="324" height="300" allow="autoplay"></iframe>
-        <p className={activeIndex === 1 ? `${s.show}` : ''}>{description2}</p>
-      </div>}
-      {video2 && <button className={s.nextButton} onClick={handleNextClick} />}
+      {frame2.video && <button className={s.backButton} onClick={handleClick} />}
+      {frame(frame1)}
+      {frame2.video && frame(frame2)}
+      {frame2.video && <button className={s.nextButton} onClick={handleClick} />}
     </div>
   );
 };
