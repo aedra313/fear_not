@@ -56,13 +56,8 @@ const Cardiogram = () => {
               width={totalWidth}
               tickValues={TICK_VALUES}
               orientation="top"
-              domain={[0, TOTAL]}
-
               standalone={false} />
-
             <VictoryLine
-              domain={{x: [0, TOTAL], y: [0, 7]}}
-
               style={{
                 data: {stroke: '#fff'},
                 parent: {border: '1px solid #ccc'},

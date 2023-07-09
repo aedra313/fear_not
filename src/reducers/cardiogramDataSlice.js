@@ -17,10 +17,10 @@ export const fetchData = () => async (dispatch) => {
 const dataValidator = (element, type) => {
   const dayLabels = [];
   if (Array.isArray(element)) {
-    dayLabels.push(<Label color={type} text={element[0]}/>);
-    dayLabels.push(<Label color={type} text={element[1]}/>);
+    dayLabels.push(<Label key={`day${Math.random()}`} color={type} text={element[0]}/>);
+    dayLabels.push(<Label key={`day${Math.random()}`} color={type} text={element[1]}/>);
   } else if (element) {
-    dayLabels.push( <Label color={type} text={element}/>);
+    dayLabels.push( <Label key={`day${Math.random()}`} color={type} text={element}/>);
   }
   return dayLabels;
 };

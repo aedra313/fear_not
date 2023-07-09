@@ -1,24 +1,21 @@
 import React, {useEffect, useState} from 'react';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {selectDay} from '../../../reducers/modalSlice';
 import s from './videoCard.module.css';
+
 /*
 import DATA from '../cardiogram/modalData';
 */
-import axios from 'axios';
+import {fetchModalData, selectModalData, selectModalLoading} from '../../../reducers/ModalDataSlice';
 
 const VideoCard = () => {
   const dayNumber = useSelector(selectDay);
-  const [data, setData] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
+  const data = useSelector(selectModalData);
+  const isLoading = useSelector(selectModalLoading);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await axios.get('http://localhost:3000/api/modal');
-      setData(response.data);
-      setIsLoading(false);
-    }
-    fetchData();
+    !data && dispatch(fetchModalData());
   }, []);
 
   const [videoToggle, setVideoToggle] = useState(false);

@@ -15,3 +15,13 @@
 .container label div {
     width: 147px;
 }
+
+.fieldErrorBlock {
+    display: block;
+}
+
+.fieldErrorBlock p {
+    font-size: 11px;
+    margin:0;
+    color: crimson;
+}
