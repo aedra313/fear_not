@@ -53,10 +53,12 @@ const VideoCard = () => {
   console.log(data);
   return (
     <div className={s.wrap}>
-      {frame2.video && <button className={s.backButton} onClick={handleClick} />}
-      {frame(frame1)}
-      {frame2.video && frame(frame2)}
-      {frame2.video && <button className={s.nextButton} onClick={handleClick} />}
+      <div className={s.arrowButtonZone}>{frame2.video && <button className={s.backButton} onClick={handleClick} />}
+      </div>
+      {!videoToggle && frame(frame1)}
+      {videoToggle && frame2.video && frame(frame2)}
+      <div className={s.arrowButtonZone}>{frame2.video && <button className={s.nextButton} onClick={handleClick} />}
+      </div>
     </div>
   );
 };

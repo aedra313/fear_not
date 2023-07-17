@@ -15,18 +15,24 @@
 
 .label {
     font-family: 'Hitch Hike', sans-serif;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 33px;
+    line-height: 1.5rem;
     margin: 0;
+}
+
+.dayNum {
+    font-size: 2rem;
 }
 
 .date {
     font-family: 'Montserrat', serif;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    margin: 0;
+    line-height: 0.875;
+    margin-top: 0.38rem;
+    margin-bottom: 0;
+
 }

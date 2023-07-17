@@ -33,7 +33,7 @@ const DateSwitcher = () => {
           </svg>
         </div>
         <div>
-          <p className={s.label}>День {day}</p>
+          <p className={s.label}>День <span className={s.dayNum}>{day}</span></p>
           <p className={s.date}>{date}</p>
         </div>
         <div onClick={handleNextDay}>
