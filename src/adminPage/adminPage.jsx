@@ -1,11 +1,13 @@
 import React, {useEffect} from 'react';
-import CardiogramAdmin from './cardiogramAdmin';
-import ModalAdmin from './modalAdmin';
-import QuizAdmin from './quizAdmin';
+import CardiogramAdmin from './create/cardiogramAdmin';
+import ModalAdmin from './create/modalAdmin';
+import QuizAdmin from './create/quizAdmin';
+import s from './adminPage.module.css';
 import {useDispatch, useSelector} from 'react-redux';
 import {selectLoading} from '../reducers/cardiogramDataSlice';
 import {selectData} from '../reducers/cardiogramDataSlice';
 import {fetchModalData, selectModalData} from '../reducers/ModalDataSlice';
+import CardiogramAdminUpdate from './update/cardiogramAdminUpdate';
 
 
 const AdminPage = () => {
@@ -44,13 +46,18 @@ const AdminPage = () => {
 
   console.log(isLoading);
   return (
-    <>
+    <div className={s.layout}>
       {!isLoading && <div>
         <CardiogramAdmin lastDay={cardiogramLastDay}/>
         <ModalAdmin lastDay={modalLastDay} />
         <QuizAdmin />
       </div>}
-    </>
+      {!isLoading && <div>
+        <CardiogramAdminUpdate lastDay={cardiogramLastDay}/>
+        <ModalAdmin lastDay={modalLastDay} />
+        <QuizAdmin />
+      </div>}
+    </div>
   );
 };
 

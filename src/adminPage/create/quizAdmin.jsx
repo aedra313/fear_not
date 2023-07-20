@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import s from './adminPage.module.css';
+import s from '../adminPage.module.css';
 
 const QuizAdmin = () =>{
   const [quizURL, setQuizURL] = useState('');

@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import s from './adminPage.module.css';
+import s from '../adminPage.module.css';
 import {
   validateDay,
   validateId,
   validateDataLength,
 } from './validation';
 import {useSelector} from 'react-redux';
-import {selectData} from '../reducers/cardiogramDataSlice';
+import {selectData} from '../../reducers/cardiogramDataSlice';
 
 // eslint-disable-next-line react/prop-types
 const CardiogramAdmin = ({lastDay}) =>{

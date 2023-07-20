@@ -1,3 +1,7 @@
+.layout {
+    display: flex;
+}
+
 .container{
     width:240px;
     border: 1px solid red;

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import s from '../adminPage.module.css';
 
-const QuizAdmin = () =>{
+const QuizAdminUpdate = () =>{
   const [quizURL, setQuizURL] = useState('');
 
   const handleSubmit = async (e) => {
@@ -36,4 +36,4 @@ const QuizAdmin = () =>{
   );
 };
 
-export default QuizAdmin;
+export default QuizAdminUpdate;

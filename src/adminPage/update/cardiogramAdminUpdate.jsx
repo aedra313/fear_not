@@ -1,93 +1,58 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import s from '../adminPage.module.css';
-import {
-  validateDay,
-  validateId,
-  validateDataLength,
-} from './validation';
 import {useSelector} from 'react-redux';
 import {selectData} from '../../reducers/cardiogramDataSlice';
 
 // eslint-disable-next-line react/prop-types
-const CardiogramAdmin = ({lastDay}) =>{
-  const [day, setDay] = useState(undefined);
-  const [id, setId] = useState(undefined);
+const CardiogramAdminUpdate = ({lastDay}) =>{
+  const [day, setDay] = useState(1);
+  const [id, setId] = useState(1);
   const [militaryData, setMilitaryData] = useState('');
   const [militaryData2, setMilitaryData2] = useState('');
   const [civilData, setCivilData] = useState('');
   const [civilData2, setCivilData2] = useState('');
   const [russian, setRussian] = useState('');
   const [rusIsolation, setRusIsolation] = useState(false);
-  const [maySubmit, setMaySubmit] = useState(true);
-  const [errorMessages, setErrorMessages] = useState(
-      {
-        day: '',
-        id: '',
-        militaryData: '',
-        militaryData2: '',
-        civilData: '',
-        civilData2: '',
-        russian: '',
-      });
+
   const DBData = useSelector(selectData);
 
 
   useEffect(()=>{
-    const dayErrorMessage = validateDay(day, lastDay);
-    const idErrorMessage = validateId(id);
-    const militaryDataErrorMessage = validateDataLength(
-        militaryData,
-        'militaryData',
-    );
-    const militaryData2ErrorMessage = validateDataLength(
-        militaryData2,
-        'militaryData2',
-    );
-    const civilDataErrorMessage = validateDataLength(civilData, 'civilData');
-    const civilData2ErrorMessage = validateDataLength(
-        civilData2,
-        'civilData2',
-    );
-    const russianErrorMessage = validateDataLength(russian, 'russian');
+    if (DBData && day) {
+      const dayData = DBData.filter((obj) => obj.day === Number(day))[0]; console.log(`${dayData} + хуй`);
+      console.log(dayData);
+      if (dayData && day) {
+        setId(dayData.id);
+        if (dayData.military.isArray) {
+          setMilitaryData(dayData.military[0]);
+          setMilitaryData2(dayData.military[1]);
+        } else {
+          setMilitaryData(dayData.military);
+        }
 
-    setErrorMessages({
-      day: dayErrorMessage,
-      id: idErrorMessage,
-      militaryData: militaryDataErrorMessage,
-      militaryData2: militaryData2ErrorMessage,
-      civilData: civilDataErrorMessage,
-      civilData2: civilData2ErrorMessage,
-      russian: russianErrorMessage,
-    });
+        if (dayData.civil.isArray) {
+          setCivilData(dayData.civil[0]);
+          setCivilData2(dayData.civil[1]);
+        } else {
+          setCivilData(dayData.civil);
+        }
+        setRussian(dayData.russian);
+        setRusIsolation(dayData.rusIsolation);
+      }
 
-    setMaySubmit(
-        !dayErrorMessage &&
-        !idErrorMessage &&
-        !militaryDataErrorMessage &&
-        !militaryData2ErrorMessage &&
-        !civilDataErrorMessage &&
-        !civilData2ErrorMessage &&
-        !russianErrorMessage,
-    );
-  }, [day, id, militaryData, militaryData2, civilData, civilData2, russian]);
-
-
-  console.log(lastDay);
-  console.log(`maySubmit ${maySubmit}`);
-
+      console.log(dayData);
+    }
+  }, [day, DBData]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!maySubmit) {
-      return;
-    }
-
     const military = militaryData2 ? [militaryData, militaryData2] : militaryData || '';
     const civil = civilData2 ? [civilData, civilData2] : civilData || '';
 
-    console.log(DBData);
+    console.log(typeof military);
+
     const data = {
       day: Number(day),
       id: Number(id),
@@ -98,19 +63,13 @@ const CardiogramAdmin = ({lastDay}) =>{
     };
     console.log(data);
     try {
-      const response = await axios.post('http://localhost:3000/api/cardiogram', data);
+      const response = await axios.put(`http://localhost:3000/api/cardiogram`, data, {
+        params: {day: day}, // Условие обновления по полю "day"
+      });
       console.log(response.data);
     } catch (error) {
       console.log(error);
     }
-    setDay('');
-    setId('');
-    setMilitaryData('');
-    setMilitaryData2('');
-    setCivilData('');
-    setCivilData2('');
-    setRussian('');
-    setRusIsolation(false);
     alert('Дані кардіограми збережено');
   };
 
@@ -119,8 +78,8 @@ const CardiogramAdmin = ({lastDay}) =>{
       <label>
         <span>День:</span>
         <div className={s.fieldErrorBlock}>
-          <input required type="number" value={day} placeholder={lastDay+1} onChange={(e) => setDay(e.target.value)} />
-          <p>{errorMessages.day}</p>
+          <input required type="number" value={day} onChange={(e) => setDay(e.target.value)} />
+          <p></p>
         </div>
       </label>
       <br />
@@ -128,7 +87,7 @@ const CardiogramAdmin = ({lastDay}) =>{
         <span>Id стану:</span>
         <div className={s.fieldErrorBlock}>
           <input required type="number" value={id} placeholder={'1 - 7'} onChange={(e) => setId(e.target.value)} />
-          <p>{errorMessages.id}</p>
+          <p></p>
         </div>
       </label>
       <br />
@@ -136,9 +95,9 @@ const CardiogramAdmin = ({lastDay}) =>{
         <span>Військові:</span>
         <div className={s.fieldErrorBlock}>
           <input type="text" value={militaryData} onChange={(e) => setMilitaryData(e.target.value)} />
-          <p>{errorMessages.militaryData}</p>
+          <p></p>
           <input disabled={!militaryData} type="text" value={militaryData2} onChange={(e) => setMilitaryData2(e.target.value)} />
-          <p>{errorMessages.militaryData2}</p>
+          <p></p>
         </div>
       </label>
       <br />
@@ -146,9 +105,9 @@ const CardiogramAdmin = ({lastDay}) =>{
         <span>Цивільні:</span>
         <div className={s.fieldErrorBlock}>
           <input type="text" value={civilData} onChange={(e) => setCivilData(e.target.value)} />
-          <p>{errorMessages.civilData}</p>
+          <p></p>
           <input disabled={!civilData} type="text" value={civilData2} onChange={(e) => setCivilData2(e.target.value)} />
-          <p>{errorMessages.civilData2}</p>
+          <p></p>
         </div>
       </label>
       <br />
@@ -156,7 +115,7 @@ const CardiogramAdmin = ({lastDay}) =>{
         <span>Вороги:</span>
         <div className={s.fieldErrorBlock}>
           <input type="text" value={russian} onChange={(e) => setRussian(e.target.value)} />
-          <p>{errorMessages.russian}</p>
+          <p></p>
         </div>
       </label>
       <br />
@@ -170,4 +129,4 @@ const CardiogramAdmin = ({lastDay}) =>{
   );
 };
 
-export default CardiogramAdmin;
+export default CardiogramAdminUpdate;

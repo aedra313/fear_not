@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import s from './adminPage.module.css';
+import s from '../adminPage.module.css';
 import {useDispatch, useSelector} from 'react-redux';
-import {fetchModalData, selectModalData} from '../reducers/ModalDataSlice';
+import {fetchModalData, selectModalData} from '../../reducers/ModalDataSlice';
 import {validateDay} from './validation';
 
 /* import {

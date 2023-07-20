@@ -10,7 +10,7 @@ import {validateDay} from './validation';
 } from './validation';*/
 
 // eslint-disable-next-line react/prop-types
-const ModalAdmin = () =>{
+const ModalAdminUpdate = () =>{
   const [day, setDay] = useState('');
   const [rawVideoURL1, setRawVideoURL1] = useState('');
   const [description1, setDescription1] = useState('');
@@ -142,4 +142,4 @@ const ModalAdmin = () =>{
   );
 };
 
-export default ModalAdmin;
+export default ModalAdminUpdate;
