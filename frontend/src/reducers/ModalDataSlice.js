@@ -5,7 +5,7 @@ import axios from 'axios';
 export const fetchModalData = () => async (dispatch) => {
   dispatch(fetchModalDataStart());
   try {
-    const response = await axios.get('http://localhost:3000/api/modal');
+    const response = await axios.get('https://fear-not-backend.onrender.com/api/modal');
     dispatch(fetchModalDataSuccess(response.data));
   } catch (error) {
     dispatch(fetchModalDataFailure(error.message));

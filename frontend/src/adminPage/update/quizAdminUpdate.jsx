@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import s from '../adminPage.module.css';
 
-const QuizAdmin = () =>{
+const QuizAdminUpdate = () =>{
   const [quizURL, setQuizURL] = useState('');
 
   const handleSubmit = async (e) => {
@@ -14,7 +14,7 @@ const QuizAdmin = () =>{
     };
     console.log(data);
     try {
-      const response = await axios.post('http://localhost:3000/api/quiz', data);
+      const response = await axios.post('https://fear-not-backend.onrender.com/api/quiz', data);
       console.log(response.data);
     } catch (error) {
       console.log(error);
@@ -36,4 +36,4 @@ const QuizAdmin = () =>{
   );
 };
 
-export default QuizAdmin;
+export default QuizAdminUpdate;

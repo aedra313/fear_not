@@ -10,7 +10,7 @@ const Quiz = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get('http://localhost:3000/api/quiz');
+      const response = await axios.get('https://fear-not-backend.onrender.com/api/quiz');
       setData(response.data);
       setIsLoading(false);
     }

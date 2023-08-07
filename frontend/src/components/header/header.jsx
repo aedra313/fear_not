@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './header.module.css';
-import Logo from '../../components/misc/logo/logo';
+import Logo from '../misc/logo/logo';
 import Switch from '../misc/switch/switch';
 
 const Header = () => {

@@ -63,7 +63,7 @@ const CardiogramAdminUpdate = ({lastDay}) =>{
     };
     console.log(data);
     try {
-      const response = await axios.put(`http://localhost:3000/api/cardiogram`, data, {
+      const response = await axios.put(`https://fear-not-backend.onrender.com/api/cardiogram`, data, {
         params: {day: day}, // Условие обновления по полю "day"
       });
       console.log(response.data);

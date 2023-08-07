@@ -6,7 +6,7 @@ import React from 'react';
 export const fetchData = () => async (dispatch) => {
   dispatch(fetchDataStart());
   try {
-    const response = await axios.get('http://localhost:3000/api/cardiogram');
+    const response = await axios.get('https://fear-not-backend.onrender.com/api/cardiogram');
     dispatch(fetchDataSuccess(response.data));
     dispatch(calculateDataLabelsArray(response.data));
   } catch (error) {

@@ -38,7 +38,7 @@ npm install
 
 
 cd fear-not/server
-node app.js
+node server.js
 
 cd ../
 npm start

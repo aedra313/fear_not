@@ -4,8 +4,16 @@
 
 .container{
     width:240px;
-    border: 1px solid red;
     padding: 5px;
+    border-radius: 13px;
+    border: 1px solid #FFF;
+    background: #172451;
+}
+
+.container label input {
+    border-radius: 8px;
+    border: 1px solid #9B9B9B;
+    background: #FFF;
 }
 .container label {
     width: 240px;

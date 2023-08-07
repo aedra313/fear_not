@@ -76,7 +76,7 @@ const ModalAdmin = () =>{
     };
     console.log(data);
     try {
-      const response = await axios.post('http://localhost:3000/api/modal', data);
+      const response = await axios.post('https://fear-not-backend.onrender.com/api/modal', data);
       console.log(response.data);
     } catch (error) {
       console.log(error);

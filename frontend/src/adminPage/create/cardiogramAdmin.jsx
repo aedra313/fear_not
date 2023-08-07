@@ -98,7 +98,7 @@ const CardiogramAdmin = ({lastDay}) =>{
     };
     console.log(data);
     try {
-      const response = await axios.post('http://localhost:3000/api/cardiogram', data);
+      const response = await axios.post('https://fear-not-backend.onrender.com/api/cardiogram', data);
       console.log(response.data);
     } catch (error) {
       console.log(error);
