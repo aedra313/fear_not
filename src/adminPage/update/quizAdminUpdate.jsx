@@ -31,7 +31,7 @@ const QuizAdminUpdate = () =>{
         <input required type="string" value={quizURL} onChange={(e) => setQuizURL(e.target.value)} />
       </label>
 
-      <button type="submit">Submit</button>
+      <button className={s.submit} type="submit">Опублікувати</button>
     </form>
   );
 };

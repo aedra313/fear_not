@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 import {selectData} from '../../reducers/cardiogramDataSlice';
 
 // eslint-disable-next-line react/prop-types
-const CardiogramAdminUpdate = ({lastDay}) =>{
+const CardiogramAdminUpdate = () =>{
   const [day, setDay] = useState(1);
   const [id, setId] = useState(1);
   const [militaryData, setMilitaryData] = useState('');
@@ -82,7 +82,6 @@ const CardiogramAdminUpdate = ({lastDay}) =>{
           <p></p>
         </div>
       </label>
-      <br />
       <label>
         <span>Id стану:</span>
         <div className={s.fieldErrorBlock}>
@@ -90,7 +89,6 @@ const CardiogramAdminUpdate = ({lastDay}) =>{
           <p></p>
         </div>
       </label>
-      <br />
       <label>
         <span>Військові:</span>
         <div className={s.fieldErrorBlock}>
@@ -100,7 +98,6 @@ const CardiogramAdminUpdate = ({lastDay}) =>{
           <p></p>
         </div>
       </label>
-      <br />
       <label>
         <span>Цивільні:</span>
         <div className={s.fieldErrorBlock}>
@@ -110,7 +107,6 @@ const CardiogramAdminUpdate = ({lastDay}) =>{
           <p></p>
         </div>
       </label>
-      <br />
       <label>
         <span>Вороги:</span>
         <div className={s.fieldErrorBlock}>
@@ -118,13 +114,11 @@ const CardiogramAdminUpdate = ({lastDay}) =>{
           <p></p>
         </div>
       </label>
-      <br />
-      <label>
+      <label className={s.rusoisolation}>
         <span>Русоізоляція:</span>
         <input type="checkbox" checked={rusIsolation} onChange={(e) => setRusIsolation(e.target.checked)} />
       </label>
-      <br />
-      <button type="submit">Submit</button>
+      <button className={s.submit} type="submit">Опублікувати</button>
     </form>
   );
 };

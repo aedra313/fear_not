@@ -123,7 +123,6 @@ const CardiogramAdmin = ({lastDay}) =>{
           <p>{errorMessages.day}</p>
         </div>
       </label>
-      <br />
       <label>
         <span>Id стану:</span>
         <div className={s.fieldErrorBlock}>
@@ -131,7 +130,6 @@ const CardiogramAdmin = ({lastDay}) =>{
           <p>{errorMessages.id}</p>
         </div>
       </label>
-      <br />
       <label>
         <span>Військові:</span>
         <div className={s.fieldErrorBlock}>
@@ -141,7 +139,6 @@ const CardiogramAdmin = ({lastDay}) =>{
           <p>{errorMessages.militaryData2}</p>
         </div>
       </label>
-      <br />
       <label>
         <span>Цивільні:</span>
         <div className={s.fieldErrorBlock}>
@@ -151,7 +148,6 @@ const CardiogramAdmin = ({lastDay}) =>{
           <p>{errorMessages.civilData2}</p>
         </div>
       </label>
-      <br />
       <label>
         <span>Вороги:</span>
         <div className={s.fieldErrorBlock}>
@@ -159,13 +155,11 @@ const CardiogramAdmin = ({lastDay}) =>{
           <p>{errorMessages.russian}</p>
         </div>
       </label>
-      <br />
       <label>
         <span>Русоізоляція:</span>
         <input type="checkbox" checked={rusIsolation} onChange={(e) => setRusIsolation(e.target.checked)} />
       </label>
-      <br />
-      <button type="submit">Submit</button>
+      <button className={s.submit} type="submit">Опублікувати</button>
     </form>
   );
 };

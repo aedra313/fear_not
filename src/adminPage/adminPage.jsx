@@ -1,13 +1,11 @@
-import React, {useEffect} from 'react';
-import CardiogramAdmin from './create/cardiogramAdmin';
-import ModalAdmin from './create/modalAdmin';
-import QuizAdmin from './create/quizAdmin';
+import React, {useEffect, useState} from 'react';
 import s from './adminPage.module.css';
 import {useDispatch, useSelector} from 'react-redux';
 import {selectLoading} from '../reducers/cardiogramDataSlice';
 import {selectData} from '../reducers/cardiogramDataSlice';
 import {fetchModalData, selectModalData} from '../reducers/ModalDataSlice';
-import CardiogramAdminUpdate from './update/cardiogramAdminUpdate';
+import CreateAdmin from './create/createAdmin';
+import UpdateAdmin from './update/updateAdmin';
 
 
 const AdminPage = () => {
@@ -15,6 +13,17 @@ const AdminPage = () => {
   const DBData = useSelector(selectData);
   const dispatch = useDispatch();
   const modalData = useSelector(selectModalData);
+
+  const [activeForm, setActiveForm] = useState('create');
+
+  const handleCreateClick = () => {
+    setActiveForm('create');
+  };
+
+  const handleUpdateClick = () => {
+    setActiveForm('update');
+  };
+
   /*
   dispatch(fetchModalData());
 */
@@ -47,16 +56,15 @@ const AdminPage = () => {
   console.log(isLoading);
   return (
     <div className={s.layout}>
-      {!isLoading && <div>
-        <CardiogramAdmin lastDay={cardiogramLastDay}/>
-        <ModalAdmin lastDay={modalLastDay} />
-        <QuizAdmin />
-      </div>}
-      {!isLoading && <div>
-        <CardiogramAdminUpdate lastDay={cardiogramLastDay}/>
-        <ModalAdmin lastDay={modalLastDay} />
-        <QuizAdmin />
-      </div>}
+      <div className={s.tabContainer}>
+        <button className={`${s.createTab} ${activeForm === 'create' ? s.activeTab : ''}`}
+          onClick={handleCreateClick}>Новий День</button>
+        <button className={`${s.updateTab} ${activeForm === 'update' ? s.activeTab : ''}`}
+          onClick={handleUpdateClick}>Редагування</button>
+      </div>
+
+      {activeForm === 'create' && <CreateAdmin isLoading={isLoading} modalLastDay={modalLastDay} cardiogramLastDay={cardiogramLastDay}/>}
+      {activeForm === 'update' &&<UpdateAdmin isLoading={isLoading} modalLastDay={modalLastDay} cardiogramLastDay={cardiogramLastDay}/>}
     </div>
   );
 };

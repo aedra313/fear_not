@@ -137,7 +137,7 @@ const ModalAdmin = () =>{
         </div>
       </label>
       <br />
-      <button type="submit">Submit</button>
+      <button className={s.submit} type="submit">Опублікувати</button>
     </form>
   );
 };

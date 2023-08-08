@@ -1,7 +1,7 @@
 {
   "name": "fear_not",
   "version": "0.1.0",
-  "homepage": "https://fear-pgzm4d9bd-aedra313.vercel.app/",
+  "homepage": "https://aedra313.github.io/fear_not/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",

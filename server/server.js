@@ -1,21 +1,21 @@
 const express = require('express');
 const cors = require('cors');
-const app = express();
+const server = express();
 const db = require('./db');
-app.use(cors());
+server.use(cors());
 const apiRouter = require('./routes/api');
 
 const PORT = 3000;
 
-app.use(express.json());
-app.use('/api', apiRouter);
+server.use(express.json());
+server.use('/api', apiRouter);
 
-app.get('/', (req, res) => {
+server.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
 db.once('open', () => {
-  app.listen(PORT, () => {
+  server.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
   });
 });
