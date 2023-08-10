@@ -5,7 +5,8 @@ import s from './conditions.module.css';
 import {selectDataLabelsArray} from '../../../reducers/cardiogramDataSlice';
 
 
-const Conditions = () => {
+// eslint-disable-next-line react/prop-types
+const Conditions = ({isModal}) => {
   // eslint-disable-next-line new-cap
 
 
@@ -26,7 +27,7 @@ const Conditions = () => {
 
   console.log(conditionLabels);
   return (
-    <div className={s.container}>
+    <div className={`${s.container} ${isModal && s.modalLayout}`}>
       {conditionLabels}
     </div>
   );

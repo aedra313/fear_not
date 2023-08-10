@@ -1,3 +1,12 @@
+.modalWrap {
+    background: #171829!important;
+
+}
+.modalWrap div {
+    background: #171829 !important;
+    color: #ffffff ;
+}
+
 .wrap {
     height: 100%;
     width: 100%;

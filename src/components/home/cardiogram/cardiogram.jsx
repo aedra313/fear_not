@@ -33,7 +33,7 @@ const Cardiogram = () => {
   }, [DATA, TOTAL]);
 
   const WIDTH = useWidth();
-
+  console.log(WIDTH);
   const container = {
     'width': WIDTH - 30 + 'px',
   };

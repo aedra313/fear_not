@@ -7,7 +7,7 @@ import Home from './components/home/home';
 import Footer from './components/footer/footer';
 
 import AdminPage from './adminPage/adminPage';
-import Modal from './components/home/modal/modal';
+import ModalDay from './components/home/modal/modal';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <AdminPage />
       </div>
       <Footer />
-      <Modal />
+      <ModalDay />
     </div>
   );
 }

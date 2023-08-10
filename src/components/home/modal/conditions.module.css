@@ -1,4 +1,20 @@
 .container div {
     transform: rotate(90deg);
-    color: black;
+    color: black !important;
+}
+
+.modalLayout {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto; /* 2 строки */
+    grid-template-columns: 45% 45%; /* 2 колонки */
+    gap: 10%; /* Расстояние между элементами */
+}
+
+@media (min-width: 743px) and (max-width: 1439px) {
+
+}
+@media (min-width: 1440px) {
+
 }
