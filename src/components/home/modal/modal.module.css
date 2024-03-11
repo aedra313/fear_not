@@ -1,10 +1,11 @@
 .modalWrap {
     background: #171829!important;
-
 }
+
 .modalWrap div {
     background: #171829 !important;
     color: #ffffff ;
+    position: relative;
 }
 
 .wrap {
@@ -22,6 +23,7 @@
 
     background: rgba(0, 0, 0, 0.5);
 }
+
 .container {
     position: relative;
     display: flex;
@@ -35,13 +37,11 @@
 
     overflow-y: scroll;
 
-
     top: 10%;
     bottom: 10%;
     margin: auto;
     padding: 0 21px 33px;
     z-index:2;
-
 }
 
 .close {
@@ -54,11 +54,12 @@
     opacity: 1;
     margin:0;
     padding: 0;
-
 }
+
 .close:hover {
     opacity: 0.5;
 }
+
 .close:before, .close:after {
     position: absolute;
     left: 15px;
@@ -67,14 +68,14 @@
     width: 2px;
     background-color: #FFFFFF;
 }
+
 .close:before {
     transform: rotate(45deg);
 }
+
 .close:after {
     transform: rotate(-45deg);
 }
-
-
 
  .condition {
      margin-top: 120px;
@@ -101,10 +102,12 @@
     color: #FFFFFF;
 
     margin: 0;
-
-
 }
 
 .conditionValue span {
     opacity: 0.3;
+}
+
+@media(min-width: 743px) {
+
 }

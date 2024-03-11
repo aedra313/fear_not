@@ -3,6 +3,7 @@ import axios from 'axios';
 
 
 export const fetchModalData = () => async (dispatch) => {
+  console.log('Запросссссссссс');
   dispatch(fetchModalDataStart());
   try {
     const response = await axios.get('https://fear-not-backend.onrender.com/api/modal');

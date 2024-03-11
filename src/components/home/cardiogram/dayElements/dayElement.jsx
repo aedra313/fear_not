@@ -25,15 +25,12 @@ const DayElement = ({labels, dayNumber}) => {
   };
   return (
     <div className={s.wrap} onClick={modalOpener}>
-      <div className={s.borders} >
-        <div className={s.border} >
-          <div className={s.borderEdge} />
-          <div className={s.borderMain} />
-          {!isMobile && <div className={s.borderMain} />}
-          {!isMobile && <div className={s.borderMain} />}
-          <div className={s.borderEdge} />
-        </div>
-        <div className={s.border} />
+      <div className={s.border} >
+        <div className={s.borderEdge} />
+        <div className={s.borderMain} />
+        {!isMobile && <div className={s.borderMain} />}
+        {!isMobile && <div className={s.borderMain} />}
+        <div className={s.borderEdge} />
       </div>
       <div className={s.labels}>{labels}</div>
     </div>

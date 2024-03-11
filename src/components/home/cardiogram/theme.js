@@ -36,6 +36,8 @@ const baseProps = {
   height: 350,
   padding: 50,
   paddingLeft: 0,
+  paddingRight: 0,
+  margin: 0,
 };
 // *
 // * Labels
@@ -54,7 +56,7 @@ const centeredLabelStyles = assign({textAnchor: 'middle'}, baseLabelStyles);
 // *
 // * Strokes
 // *
-const strokeDasharray = '1, 34';
+const strokeDasharray = '1, 61';
 const strokeLinecap = 'round';
 const strokeLinejoin = 'round';
 

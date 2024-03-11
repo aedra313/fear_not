@@ -1,12 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
+import {fetchModalData, selectModalData, selectModalLoading} from '../../../reducers/ModalDataSlice';
+import YouTube from 'react-youtube';
+import {Carousel} from 'antd';
 import {useDispatch, useSelector} from 'react-redux';
 import {selectDay} from '../../../reducers/modalSlice';
 import s from './videoCard.module.css';
-
-/*
-import DATA from '../cardiogram/modalData';
-*/
-import {fetchModalData, selectModalData, selectModalLoading} from '../../../reducers/ModalDataSlice';
 
 const VideoCard = () => {
   const dayNumber = useSelector(selectDay);
@@ -18,49 +16,66 @@ const VideoCard = () => {
     !data && dispatch(fetchModalData());
   }, []);
 
-  const [videoToggle, setVideoToggle] = useState(false);
-
   if (isLoading) {
     return <div>Loading...</div>;
   }
-  const handleClick = () => {
-    setVideoToggle( !videoToggle);
-  };
 
   const dayData = data[dayNumber-1];
   console.log(dayData);
+
   const frame1 ={
     video: dayData.videoURL1,
     description: dayData.description1,
-    cn: 'imgFrame ' + (videoToggle ? s.toggleOut : s.toggleIn),
   };
+
   const frame2 ={
     video: dayData.videoURL2,
     description: dayData.description2,
-    cn: 'imgFrame ' + (videoToggle ? s.toggleIn : s.toggleOut),
   };
 
 
-  const frame =({video, description, cn}) =>{
+  const frame =({video, description}) =>{
+    const opts = {
+      height: '700',
+      width: '1040',
+      playerVars: {
+        autoplay: 1,
+      },
+    };
+
+    const onReady = (event) => {
+      // access to player in all event handlers via event.target
+      event.target.pauseVideo();
+    };
+
     return (
       <div className={s.videoCard} >
-        <iframe className={cn} src={video} allow="autoplay"></iframe>
-        <p className={cn}>{description}</p>
+        {console.log('Зрада')}
+        {/* <YouTube
+          videoId="4fFu9cMarB8"
+          opts={opts}
+          onReady={onReady}
+        />*/}
+        <iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src={video} allow="autoplay" />
+        <div><p>{description}</p></div>
+
       </div>
     );
   };
 
-  console.log(data);
+  const onChange = (currentSlide) => {
+    console.log(currentSlide);
+  };
   return (
-    <div className={s.wrap}>
-      <div className={s.arrowButtonZone}>{frame2.video && <button className={s.backButton} onClick={handleClick} />}
+    <Carousel afterChange={onChange}>
+      <div>
+        {frame(frame1)}
       </div>
-      {!videoToggle && frame(frame1)}
-      {videoToggle && frame2.video && frame(frame2)}
-      <div className={s.arrowButtonZone}>{frame2.video && <button className={s.nextButton} onClick={handleClick} />}
-      </div>
-    </div>
+      {frame2.video && <div>
+        {frame(frame2)}
+      </div>}
+    </Carousel>
   );
 };
-
 export default VideoCard;
+

@@ -5,51 +5,9 @@
     max-width: 100%;
 }
 
-.arrowButtonZone {
-    width: 4rem;
-    height: 15rem;
-    display: flex;
-    margin: 0 -18px 0 -21px;
-    justify-content: space-around;
-
-}
-
-.nextButton {
-    content: '';
-    display: block;
-    background-color: transparent;
-    border: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='19' height='47' viewBox='0 0 19 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_334_2663' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='47'%3E%3Cpath d='M10.4876 23.2628C9.90741 22.4211 9.30958 21.6029 8.7495 20.7296C6.31622 16.9314 3.88503 13.1201 1.45595 9.2956C0.0513578 7.09751 0.129391 4.73185 1.45972 2.37802C3.30482 -0.870813 5.11972 -0.705217 6.98747 2.3524C10.5682 8.21134 14.2458 13.9323 17.9712 19.5645C19.3557 21.6483 19.3305 25.2697 17.9712 27.3337C14.0973 33.2006 10.3278 39.2369 6.51801 45.2063C4.98756 47.6035 3.47347 47.5976 1.92666 45.1905C1.73284 44.8889 1.54027 44.5892 1.34897 44.2856C0.12058 42.3281 0.0903741 39.7515 1.32757 37.7978C4.18038 33.2991 7.04243 28.8195 9.9137 24.3589C10.0874 24.0869 10.3454 23.9469 10.5644 23.7478L10.4876 23.2628Z' fill='%23A4A4A4'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_334_2663)'%3E%3Crect x='-5.78198' y='-4' width='30.9776' height='55' fill='%23C4C3C3'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    color:red;
-    width: 10px;
-    height: 48px;
-    z-index: 3;
-    padding: 10px;
-    align-self: center;
-    margin: 0 -33px 0 0   ;
-}
-
-.backButton {
-    content: '';
-    display: block;
-    background-color: transparent;
-    border: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='19' height='47' viewBox='0 0 19 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_334_2663' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='47'%3E%3Cpath d='M10.4876 23.2628C9.90741 22.4211 9.30958 21.6029 8.7495 20.7296C6.31622 16.9314 3.88503 13.1201 1.45595 9.2956C0.0513578 7.09751 0.129391 4.73185 1.45972 2.37802C3.30482 -0.870813 5.11972 -0.705217 6.98747 2.3524C10.5682 8.21134 14.2458 13.9323 17.9712 19.5645C19.3557 21.6483 19.3305 25.2697 17.9712 27.3337C14.0973 33.2006 10.3278 39.2369 6.51801 45.2063C4.98756 47.6035 3.47347 47.5976 1.92666 45.1905C1.73284 44.8889 1.54027 44.5892 1.34897 44.2856C0.12058 42.3281 0.0903741 39.7515 1.32757 37.7978C4.18038 33.2991 7.04243 28.8195 9.9137 24.3589C10.0874 24.0869 10.3454 23.9469 10.5644 23.7478L10.4876 23.2628Z' fill='%23A4A4A4'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_334_2663)'%3E%3Crect x='-5.78198' y='-4' width='30.9776' height='55' fill='%23C4C3C3'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    transform: rotate(180deg);
-    color:red;
-    width: 10px;
-    height: 48px;
-    z-index: 3;
-    padding: 10px;
-    margin: 0;
-    align-self: center;
-}
-
-
 .videoCard {
     margin-top: 30px;
+    position: relative;
 
     max-width: 250px;
 
@@ -59,26 +17,28 @@
 
 
     width: 11.6rem;
-    height: 15.5rem;
-
     align-self: center;
 }
 
 .videoCard iframe {
-    width: 100%;
-    height:100%;
+    width: 15.4rem;
+    height:15.4rem;
     border: none
 }
 
 .videoCard p {
+    position: relative;
+    display: block;
     margin-top:35px;
-    margin-left: -3rem;
-    width: 155%;
+    margin-left: 0;
+    width: 120%;
     font-family: "Montserrat", sans-serif;
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 500;
     line-height: 1.05rem;
+    color: #FFFFFF;
+    z-index: 3;
 }
 
 

@@ -103,14 +103,14 @@ router.post('/quiz', async (req, res) => {
   }
 });
 
-router.put("/cardiogram", async (req, res) => {
+router.put('/cardiogram', async (req, res) => {
   try {
-    const { day, military, civil, russian, rusIsolation } = req.body; // Получаем данные для обновления из тела запроса
+    const {day, military, civil, russian, rusIsolation} = req.body; // Получаем данные для обновления из тела запроса
 
     // Проверяем, есть ли запись с указанным значением поля day в базе данных
-    const existingData = await CardiogramModel.findOne({ day: Number(day) });
+    const existingData = await CardiogramModel.findOne({day: Number(day)});
     if (!existingData) {
-      return res.status(404).json({ message: "Запись не найдена" });
+      return res.status(404).json({message: 'Запись не найдена'});
     }
 
     // Обновляем поля записи на основе полученных данных
@@ -122,10 +122,10 @@ router.put("/cardiogram", async (req, res) => {
     // Сохраняем обновленную запись в базе данных
     await existingData.save();
 
-    res.json({ message: "Данные кардиограммы обновлены" });
+    res.json({message: 'Данные кардиограммы обновлены'});
   } catch (error) {
     console.error(error.message);
-    res.status(500).json({ message: "Ошибка сервера" });
+    res.status(500).json({message: 'Ошибка сервера'});
   }
 });
 // Update modal data by ID

@@ -4,6 +4,7 @@ import About from './about/about';
 import Cardiogram from './cardiogram/cardiogram';
 import {fetchData, selectLoading} from '../../reducers/cardiogramDataSlice';
 import {useDispatch, useSelector} from 'react-redux';
+import s from './home.module.css';
 
 // eslint-disable-next-line react/prop-types
 const Home = () => {
@@ -18,9 +19,12 @@ const Home = () => {
     return console.log('loading');
   }
 
+
   return (
     <div>
-      {!isLoading && <Cardiogram />}
+      <div className={s.container}>
+        {!isLoading && <Cardiogram />}
+      </div>
       <Quiz />
       <About />
     </div>

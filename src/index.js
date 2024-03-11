@@ -5,11 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './app/store';
 import {Provider} from 'react-redux';
+import {DevSupport} from '@react-buddy/ide-toolbox';
+import {ComponentPreviews, useInitial} from './dev';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
-      <App />
+      <DevSupport ComponentPreviews={ComponentPreviews}
+        useInitialHook={useInitial}
+      >
+        <App/>
+      </DevSupport>
     </Provider>,
 );
 

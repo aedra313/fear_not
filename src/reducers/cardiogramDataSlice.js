@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 import axios from 'axios';
-import Label from '../components/misc/cardiogramMisc/label';
+import VerticalLabel from '../components/home/cardiogram/theFence/newLabel';
 import React from 'react';
 
 export const fetchData = () => async (dispatch) => {
@@ -17,10 +17,10 @@ export const fetchData = () => async (dispatch) => {
 const dataValidator = (element, type) => {
   const dayLabels = [];
   if (Array.isArray(element)) {
-    dayLabels.push(<Label key={`day${Math.random()}`} color={type} text={element[0]}/>);
-    dayLabels.push(<Label key={`day${Math.random()}`} color={type} text={element[1]}/>);
+    dayLabels.push(<VerticalLabel key={`day${Math.random()}`} color={type} text={element[0]}/>);
+    dayLabels.push(<VerticalLabel key={`day${Math.random()}`} color={type} text={element[1]}/>);
   } else if (element) {
-    dayLabels.push( <Label key={`day${Math.random()}`} color={type} text={element}/>);
+    dayLabels.push( <VerticalLabel key={`day${Math.random()}`} color={type} text={element}/>);
   }
   return dayLabels;
 };

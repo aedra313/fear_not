@@ -44,30 +44,28 @@ const Cardiogram = () => {
 
 
   return (
-    <div>
-      <div className={s.container} style={container}>
-        <div className={s.wrap} style={wrap}>
-          <VictoryChart
-            width={totalWidth}
-            theme={Theme}
-            domainPadding={{x: 50}}>
+    <div className={s.container} style={container}>
+      <div className={s.wrap} style={wrap}>
+        <VictoryChart
+          width={totalWidth}
+          theme={Theme}
+          domainPadding={{x: [0, 0]}}>
 
-            <VictoryAxis crossAxis
-              width={totalWidth}
-              tickValues={TICK_VALUES}
-              orientation="top"
-              standalone={false} />
-            <VictoryLine
-              style={{
-                data: {stroke: '#fff'},
-                parent: {border: '1px solid #ccc'},
-              }}
-              data={COORDINATES}
-            />
-            <VictoryScatter size={4} data = {COORDINATES} style={{data: {fill: 'white'}}}/>
-          </VictoryChart>
-          <Labels />
-        </div>
+          <VictoryAxis crossAxis
+            tickValues={TICK_VALUES}
+            orientation="top"
+            standalone={false} />
+          <VictoryLine
+            width={totalWidth}
+            style={{
+              data: {stroke: '#fff'},
+              parent: {border: '1px solid #ccc'},
+            }}
+            data={COORDINATES}
+          />
+          <VictoryScatter size={4} data = {COORDINATES} style={{data: {fill: 'white'}}}/>
+        </VictoryChart>
+        <Labels width={totalWidth} />
       </div>
     </div>
   );

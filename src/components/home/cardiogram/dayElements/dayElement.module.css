@@ -1,11 +1,13 @@
 .wrap {
-    position: relative;
-    z-index: 1;
-margin-top: -250px;
-    margin-left: -1px;
+    /*
+    position: absolute;
+    */
+    z-index: 150;
     margin-bottom: 20px;
 
 }
+
+
 .wrap:hover {
     background: rgba(14, 40, 68, 0.5);
     box-shadow: 1px 1px 25px rgba(255, 255, 0, 0.7);
@@ -19,6 +21,7 @@ margin-top: -250px;
 
 .border {
     width: 1px;
+    margin-top: 250px;
     height: 250px;
     display: flex;
     flex-direction: column;

@@ -1,15 +1,35 @@
+.container {
+    background-color: #FFFFFF !important;
+}
+
 .container div {
     transform: rotate(90deg);
     color: black !important;
+    height: 1.4rem;
+    width: 7.7rem;
+}
+
+.container div p {
+    font-family: Kurale, sans-serif;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.0375rem;
+    margin-left: -27px;
 }
 
 .modalLayout {
-    width: 70%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-rows: auto auto; /* 2 строки */
-    grid-template-columns: 45% 45%; /* 2 колонки */
-    gap: 10%; /* Расстояние между элементами */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background: transparent !important;
+}
+
+.modalLayout svg {
+    transform: scaleY(2.6596);
+    width: 22px;
+    height: 124px!important;
 }
 
 @media (min-width: 743px) and (max-width: 1439px) {
